@@ -116,15 +116,13 @@ client.on('guildMemberRemove', member => {
 });
 
 var request = require('request');
-
 request('https://simsekapi.glitch.me/HgV6Aca9/sondakika', function (error, response, body) {
-    if (error) return console.log('Hata:', error); // Hata olursa, konsola göndersin,
-    else if (!error) { // Eğer hata yoksa;
-        var info = JSON.parse(body); // info değişkeninin içerisine JSON'ı ayrıştırsın,
-        console.log(info.sondakika); // ve konsola çıktıyı versin.
+    if (error) return message.channel.send('Hata:', error);
+    else if (!error) {
+        var veri = JSON.parse(body);
+        message.channel.send(veri.sondakika);
     }
 });
-
 
 client.on('message', msg => {
   const reason = msg.content.split(" ").slice(1).join(" ");
