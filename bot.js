@@ -115,14 +115,14 @@ client.on('guildMemberRemove', member => {
  channel.send(embed);
 });
 
-var request = require('request');
-request('https://simsekapi.glitch.me/HgV6Aca9/dolar', function (error, response, body) {
-    if (error) return message.channel.send('Hata:', error);
-    else if (!error) {
-        var veri = JSON.parse(body);
-        msg.channel.send(veri.dolar);
-    }
-});
+var request = require('request'); // ilk önce kullanacağımız modülü yani request'i belirtelim.
+request('https://simsekapi.glitch.me/HgV6Aca9/sondakika', function (error, response, body) { // veri çekeceğimiz siteyi belirliyoruz.
+    if (error) return message.channel.send('Hata:', error); // hata varsa kanala göndersin.
+    else if (!error) { // hata yoksa;
+        var veri = JSON.parse(body); // siteden ana veriyi çeksin.
+        message.channel.send(veri.sondakika); // çekilen değeri filtreleyerek kanala yollasın.
+    } // eğer kodunu kapatalım.
+}); // en s
 
 client.on('message', msg => {
   const reason = msg.content.split(" ").slice(1).join(" ");
