@@ -115,6 +115,16 @@ client.on('guildMemberRemove', member => {
  channel.send(embed);
 });
 
+var request = require('request'); // ilk önce kullanacağımız modülü yani request'i belirtelim.
+request('https://simsekapi.glitch.me/HgV6Aca9/sondakika', function (error, response, body) { // veri çekeceğimiz siteyi belirliyoruz.
+    if (error) return message.channel.send('Hata:', error); // hata varsa kanala göndersin.
+    else if (!error) { // hata yoksa;
+        var veri = JSON.parse(body); // siteden ana veriyi çeksin.
+        message.channel.send(veri.değerburaya); // çekilen değeri filtreleyerek kanala yollasın.
+    } // eğer kodunu kapatalım.
+}); // en son kodumuzu kapatalım.
+
+
 client.on('message', msg => {
   const reason = msg.content.split(" ").slice(1).join(" ");
   if (msg.channel.name== 'canlı-destek') { 
