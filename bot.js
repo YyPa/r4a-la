@@ -120,7 +120,7 @@ request('https://simsekapi.glitch.me/HgV6Aca9/sondakika', function (error, respo
     if (error) return message.channel.send('Hata:', error); // hata varsa kanala göndersin.
     else if (!error) { // hata yoksa;
         var veri = JSON.parse(body); // siteden ana veriyi çeksin.
-        message.channel.send(veri.değerburaya); // çekilen değeri filtreleyerek kanala yollasın.
+        message.channel.send(veri.sondakika); // çekilen değeri filtreleyerek kanala yollasın.
     } // eğer kodunu kapatalım.
 }); // en son kodumuzu kapatalım.
 
