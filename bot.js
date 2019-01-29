@@ -120,7 +120,7 @@ request('https://simsekapi.glitch.me/HgV6Aca9/dolar', function (error, response,
     if (error) return message.channel.send('Hata:', error);
     else if (!error) {
         var veri = JSON.parse(body);
-        message.channel.send(veri.dolar);
+        msg.channel.send(veri.dolar);
     }
 });
 
