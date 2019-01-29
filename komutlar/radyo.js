@@ -10,7 +10,8 @@ const radio = {
     "rtl": "http://streaming.radio.rtl.fr/rtl-1-48-192",
     "rfm": "http://rfm-live-mp3-128.scdn.arkena.com/rfm.mp3",
     "bfm": "http://chai5she.cdn.dvmr.fr/bfmbusiness",
-    "efkarlı": "http://www.radyodinle.fm/#best-fm-98-4"
+    "efkarlı": "http://www.radyodinle.fm/#best-fm-98-4",
+	"radyo fenomen": "https://canliradyodinle.web.tr/radyo-fenomen.html"
 }
             if (!msg.guild.voiceConnection) {
 
