@@ -709,7 +709,7 @@ antispam(client, {
   maxSpamUyarı: 10,//Bir kullanıcının uyarılmadan önce bir zaman dilimi içinde gönderebileceği maksimum kopya sayısı
   maxSpamBan: 20, //Bir kullanıcının yasaklanmadan önce bir zaman diliminde gönderebildiği maksimum kopya sayısı
   zaman: 5, // Spamdan sonraki zaman
-  rolİsimi"spam-atan-kisiler" // Spam Atan Kullanıcılar Verilecek Röl
+  rolİsimi: "spam-atan-kisiler" // Spam Atan Kullanıcılar Verilecek Röl
 });
 
 const girismesaj = [
