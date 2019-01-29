@@ -1,6 +1,5 @@
 const moment = require("moment")
 const Discord = require("discord.js");
-const dateFormat = require('dateformat');
 
 exports.run = (client, message) => {
   
