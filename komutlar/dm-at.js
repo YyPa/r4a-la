@@ -12,7 +12,7 @@ exports.run = function(client, message, args) {
     .setTitle('Yapımcımdan Sana Mesaj Geldi !')
     .addField('DM Atan :', `➽ <@${message.author.id}>`)
     .addField('DM İse :', `➽ ${dm}`)
-    .setFooter('Direk Mesaj | Şakir Bot')
+    .setFooter('Direk Mesaj | R7 Bot')
     dmkisi.sendEmbed(dmat);
     const dmtamam = new Discord.RichEmbed()
     .setColor('RANDOM')
