@@ -699,19 +699,6 @@ function play(guild, song) {
   .setColor('RANDOM'));
 }
 
-
-antispam(client, {
-  uyarmaSınırı: 10, //Uyarılmadan önce aralıkta gönderilmesine izin verilen maksimum mesaj miktarı.
-  banlamaSınırı: 20, //Yasaklanmadan önce aralıkta gönderilmesine izin verilen maksimum ileti miktar.
-  aralık: 10000, // ms kullanıcılarda zaman miktarı, yasaklanmadan önce aralık değişkeninin maksimumunu gönderebilir.
-  uyarmaMesajı: "Spamı Durdur Yoksa Mutelerim.", // Uyarı mesajı, kullanıcıya hızlı gideceklerini belirten kullanıcıya gönderilir..
-  rolMesajı: "Spam için yasaklandı, başka biri var mı?", //Yasak mesaj, yasaklanmış kullanıcıyı ,Banlar
-  maxSpamUyarı: 10,//Bir kullanıcının uyarılmadan önce bir zaman dilimi içinde gönderebileceği maksimum kopya sayısı
-  maxSpamBan: 20, //Bir kullanıcının yasaklanmadan önce bir zaman diliminde gönderebildiği maksimum kopya sayısı
-  zaman: 5, // Spamdan sonraki zaman
-  rolİsimi: "spam-atan-kisiler" // Spam Atan Kullanıcılar Verilecek Röl
-});
-
 const girismesaj = [
   '**Cait Army sunucunuza eklendi!**',
   '**Cait Army** sunucunuzdaki insanlara kolaylıklar sağlar.',
