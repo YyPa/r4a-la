@@ -11,7 +11,7 @@ const radio = {
     "rfm": "http://rfm-live-mp3-128.scdn.arkena.com/rfm.mp3",
     "bfm": "http://chai5she.cdn.dvmr.fr/bfmbusiness",
     "efkarlı": "http://www.radyodinle.fm/#best-fm-98-4",
-	"radyo fenomen": "https://canliradyodinle.web.tr/radyo-fenomen.html"
+	"radyo fenomen": "http://fenomen.listenfenomen.com/fenomen/128/icecast.audio"
 }
             if (!msg.guild.voiceConnection) {
 
@@ -21,9 +21,9 @@ const radio = {
 
             let args = msg.content.split(" ").slice(1).join(" ").toLowerCase();
 
-      if (!args) return msg.channel.send(':x: | Bir Radyo Seçin : **franceinfo**, **efkarlı**, **rtl2**, **skyrock**, **rtl**, **rfm**, **bfm**')
+      if (!args) return msg.channel.send(':x: | Bir Radyo Seçin : **franceinfo**, **efkarlı**, **rtl2**, **skyrock**, **rtl**, **rfm**, **bfm**, *radyo fenomen*')
 
-        if(!radio[args]) return msg.channel.send(':x: | Lütfen Yandaki Radiolardan Birini Seç : **franceinfo**, **efkarlı**, **rtl2**, **skyrock**, **rtl**, **rfm**, **bfm**')
+        if(!radio[args]) return msg.channel.send(':x: | Lütfen Yandaki Radiolardan Birini Seç : **franceinfo**, **efkarlı**, **rtl2**, **skyrock**, **rtl**, **rfm**, **bfm**, *radyo fenomen*')
 
     msg.member.voiceChannel.join().then(connection => {
 
