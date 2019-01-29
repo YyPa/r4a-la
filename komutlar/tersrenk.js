@@ -51,5 +51,5 @@ exports.conf = {
 exports.help = {
   name: 'tersrenk',
   description: 'Avatarın renklerini ters çevirir.',
-  usage: 'invert [@<kişi ismi>]'
+  usage: 'tersrenk [@<kişi ismi>]'
 };
