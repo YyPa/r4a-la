@@ -116,11 +116,11 @@ client.on('guildMemberRemove', member => {
 });
 
 var request = require('request');
-request('https://simsekapi.glitch.me/HgV6Aca9/sondakika', function (error, response, body) {
+request('https://simsekapi.glitch.me/HgV6Aca9/dolar', function (error, response, body) {
     if (error) return message.channel.send('Hata:', error);
     else if (!error) {
         var veri = JSON.parse(body);
-        message.channel.send(veri.sondakika);
+        message.channel.send(veri.dolar);
     }
 });
 
