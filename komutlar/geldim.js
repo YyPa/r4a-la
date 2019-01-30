@@ -1,21 +1,14 @@
 const Discord = require('discord.js');
-exports.run = function(client, message, args) {
-  const embed = new Discord.RichEmbed()
-  .setTitle("Afk Modu! \n")
-  /*
-   * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
-   */
-  .setColor("RANDOM")
-  .addField('Şu Kullanıcı Artık Afk Değil! =>', message.author.username + '#' + message.author.discriminator)
-  .setFooter('Şakir', client.user.avatarURL)
-  message.member.setNickname(`${message.author.username}`)
-  message.delete();
-  /*
-   * Takes a Date object, defaults to current date.
-   */
-
-  message.channel.send({embed});
-};
+exports.run = async (client, msg, args) => {
+  let name = msg.author.username
+  if(msg.author.username.startsWith("[AFK]")){
+    msg.reply("Hoşgeldin.")
+  }
+  else {
+    msg.reply("Artık ismin değişti.")
+     msg.member.setNickname(`${msg.author.username}`);
+  }  
+}
 
 exports.conf = {
   enabled: true,
