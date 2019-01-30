@@ -9,6 +9,7 @@ exports.run = function(client, message, args) {
   .addField('Şu Kullanıcı Artık Afk Değil! =>', message.author.username + '#' + message.author.discriminator)
   .setFooter('Şakir', client.user.avatarURL)
   message.delete();
+  message.member.setNickname(`[AFK]${message.author.username}`);
   /*
    * Takes a Date object, defaults to current date.
    */
