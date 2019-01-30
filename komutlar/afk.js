@@ -9,7 +9,7 @@ exports.run = async (client, msg, args) => {
   }
   else {
     msg.reply("Artık AFK'sın.")
-     msg.member.setNickname(`${msg.author.username}`);
+     msg.member.setNickname(`[AFK]${msg.author.username}`);
   }  
 }
 
