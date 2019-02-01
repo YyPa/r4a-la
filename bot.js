@@ -827,7 +827,7 @@ client.on("message", async message => {
   if (curLevel > userData.level) {
     userData.level = curLevel;
         var user = message.mentions.users.first() || message.author;
-message.channel.send(`🆙 **| ${user.username} Tebrikler! Level atladın**`)
+message.channel.send(`🆙 **| ${user.username} Tebrikler Dostum! Level atladın**`)
     }
 
 fs.writeFile('./xp.json', JSON.stringify(points), (err) => {
