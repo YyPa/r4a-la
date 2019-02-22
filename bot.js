@@ -86,6 +86,14 @@ client.unload = command => {
 };
 
 client.on('guildMemberAdd', member => {
+  const embed = new Discord.RichEmbed()
+    .setColor("0x808080")
+    .addField('Aramıza, hoşgeldin! :tada:', 'Daha iyi bir hizmet sağlayabilmek amacı ile bu sunucuda yer almaktayım!')
+    .setFooter('iyi eğlenceler dileriz!', client.user.avatarURL)
+  member.send(embed);
+});
+
+client.on('guildMemberAdd', member => {
   member.addRole(member.guild.roles.find(r => r.name.startsWith('gelen-giden')));
   const channel = member.guild.channels.find('name', 'sayaç-gelen-giden');
   if (!channel) return;
