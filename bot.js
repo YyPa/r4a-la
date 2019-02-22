@@ -276,6 +276,24 @@ request('https://api.eggsybot.xyz/espri', function (error, response, body) {
     }
 });
 
+
+client.on('guildDelete', guild => {
+
+let rrrsembed = new Discord.RichEmbed()
+
+.setColor("RED")
+.setTitle("<a:logout:508233230458028035> | Botumuzu Kickledi :( ")
+.addField("Sunucu Adı:", guild.name)
+.addField("Sunucu sahibi", guild.owner)
+.addField("Sunucu Sahibi'nin ID'si", guild.ownerID)
+.addField("Sunucunun Kurulu Olduğu Bölge:", guild.region)
+.addField("Sunucudaki Kişi Sayısı:", guild.memberCount)
+
+   client.channels.get('548455190701932546').send(rrrsembed);
+  
+});
+
+
 client.on("guildMemberAdd", async member => {
         let sayac = JSON.parse(fs.readFileSync("./otorol.json", "utf8"));
   let otorole =  JSON.parse(fs.readFileSync("./otorol.json", "utf8"));
